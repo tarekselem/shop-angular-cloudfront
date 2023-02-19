@@ -12,21 +12,21 @@
           "version": "1.134.0"
         }
       },
-      "MyJSCCStaticWebsite": {
-        "id": "MyJSCCStaticWebsite",
-        "path": "MyJSCCStaticWebsite",
+      "eShopWebsite": {
+        "id": "eShopWebsite",
+        "path": "eShopWebsite",
         "children": {
-          "JSCCStaticWebsite": {
-            "id": "JSCCStaticWebsite",
-            "path": "MyJSCCStaticWebsite/JSCCStaticWebsite",
+          "eShopWebsite": {
+            "id": "eShopWebsite",
+            "path": "eShopWebsite/eShopWebsite",
             "children": {
-              "JSCCCloudFront-OAI": {
-                "id": "JSCCCloudFront-OAI",
-                "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCCloudFront-OAI",
+              "eShop-OAI": {
+                "id": "eShop-OAI",
+                "path": "eShopWebsite/eShopWebsite/eShop-OAI",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCCloudFront-OAI/Resource",
+                    "path": "eShopWebsite/eShopWebsite/eShop-OAI/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
                       "aws:cdk:cloudformation:props": {
@@ -46,13 +46,13 @@
                   "version": "1.134.0"
                 }
               },
-              "JSCCSiteBucket": {
-                "id": "JSCCSiteBucket",
-                "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCSiteBucket",
+              "eShopAppBucket": {
+                "id": "eShopAppBucket",
+                "path": "eShopWebsite/eShopWebsite/eShopAppBucket",
                 "children": {
                   "Notifications": {
                     "id": "Notifications",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCSiteBucket/Notifications",
+                    "path": "eShopWebsite/eShopWebsite/eShopAppBucket/Notifications",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.Construct",
                       "version": "1.134.0"
@@ -60,23 +60,16 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCSiteBucket/Resource",
+                    "path": "eShopWebsite/eShopWebsite/eShopAppBucket/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                       "aws:cdk:cloudformation:props": {
-                        "bucketName": "js-cc-aws-cdk-website-test",
                         "publicAccessBlockConfiguration": {
                           "blockPublicAcls": true,
                           "blockPublicPolicy": true,
                           "ignorePublicAcls": true,
                           "restrictPublicBuckets": true
                         },
-                        "tags": [
-                          {
-                            "key": "aws-cdk:auto-delete-objects",
-                            "value": "true"
-                          }
-                        ],
                         "websiteConfiguration": {
                           "indexDocument": "index.html"
                         }
@@ -89,64 +82,26 @@
                   },
                   "Policy": {
                     "id": "Policy",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCSiteBucket/Policy",
+                    "path": "eShopWebsite/eShopWebsite/eShopAppBucket/Policy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCSiteBucket/Policy/Resource",
+                        "path": "eShopWebsite/eShopWebsite/eShopAppBucket/Policy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
                           "aws:cdk:cloudformation:props": {
                             "bucket": {
-                              "Ref": "JSCCStaticWebsiteJSCCSiteBucket11BBD5A2"
+                              "Ref": "eShopWebsiteeShopAppBucket0C39B308"
                             },
                             "policyDocument": {
                               "Statement": [
                                 {
-                                  "Action": [
-                                    "s3:GetBucket*",
-                                    "s3:List*",
-                                    "s3:DeleteObject*"
-                                  ],
-                                  "Effect": "Allow",
-                                  "Principal": {
-                                    "AWS": {
-                                      "Fn::GetAtt": [
-                                        "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
-                                        "Arn"
-                                      ]
-                                    }
-                                  },
-                                  "Resource": [
-                                    {
-                                      "Fn::GetAtt": [
-                                        "JSCCStaticWebsiteJSCCSiteBucket11BBD5A2",
-                                        "Arn"
-                                      ]
-                                    },
-                                    {
-                                      "Fn::Join": [
-                                        "",
-                                        [
-                                          {
-                                            "Fn::GetAtt": [
-                                              "JSCCStaticWebsiteJSCCSiteBucket11BBD5A2",
-                                              "Arn"
-                                            ]
-                                          },
-                                          "/*"
-                                        ]
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "Action": "s3:GetObject",
+                                  "Action": "S3:GetObject",
                                   "Effect": "Allow",
                                   "Principal": {
                                     "CanonicalUser": {
                                       "Fn::GetAtt": [
-                                        "JSCCStaticWebsiteJSCCCloudFrontOAI7BCE2C80",
+                                        "eShopWebsiteeShopOAI53230596",
                                         "S3CanonicalUserId"
                                       ]
                                     }
@@ -157,7 +112,33 @@
                                       [
                                         {
                                           "Fn::GetAtt": [
-                                            "JSCCStaticWebsiteJSCCSiteBucket11BBD5A2",
+                                            "eShopWebsiteeShopAppBucket0C39B308",
+                                            "Arn"
+                                          ]
+                                        },
+                                        "/*"
+                                      ]
+                                    ]
+                                  }
+                                },
+                                {
+                                  "Action": "s3:GetObject",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "CanonicalUser": {
+                                      "Fn::GetAtt": [
+                                        "eShopWebsiteeShopOAI53230596",
+                                        "S3CanonicalUserId"
+                                      ]
+                                    }
+                                  },
+                                  "Resource": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "eShopWebsiteeShopAppBucket0C39B308",
                                             "Arn"
                                           ]
                                         },
@@ -181,24 +162,6 @@
                       "fqn": "@aws-cdk/aws-s3.BucketPolicy",
                       "version": "1.134.0"
                     }
-                  },
-                  "AutoDeleteObjectsCustomResource": {
-                    "id": "AutoDeleteObjectsCustomResource",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCSiteBucket/AutoDeleteObjectsCustomResource",
-                    "children": {
-                      "Default": {
-                        "id": "Default",
-                        "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCSiteBucket/AutoDeleteObjectsCustomResource/Default",
-                        "constructInfo": {
-                          "fqn": "@aws-cdk/core.CfnResource",
-                          "version": "1.134.0"
-                        }
-                      }
-                    },
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/core.CustomResource",
-                      "version": "1.134.0"
-                    }
                   }
                 },
                 "constructInfo": {
@@ -206,21 +169,13 @@
                   "version": "1.134.0"
                 }
               },
-              "Bucket": {
-                "id": "Bucket",
-                "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/Bucket",
-                "constructInfo": {
-                  "fqn": "@aws-cdk/core.CfnOutput",
-                  "version": "1.134.0"
-                }
-              },
-              "JSCCSiteDistribution": {
-                "id": "JSCCSiteDistribution",
-                "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCSiteDistribution",
+              "eShop-distribution": {
+                "id": "eShop-distribution",
+                "path": "eShopWebsite/eShopWebsite/eShop-distribution",
                 "children": {
                   "CFDistribution": {
                     "id": "CFDistribution",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCSiteDistribution/CFDistribution",
+                    "path": "eShopWebsite/eShopWebsite/eShop-distribution/CFDistribution",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::CloudFront::Distribution",
                       "aws:cdk:cloudformation:props": {
@@ -235,7 +190,7 @@
                               "id": "origin1",
                               "domainName": {
                                 "Fn::GetAtt": [
-                                  "JSCCStaticWebsiteJSCCSiteBucket11BBD5A2",
+                                  "eShopWebsiteeShopAppBucket0C39B308",
                                   "RegionalDomainName"
                                 ]
                               },
@@ -246,7 +201,7 @@
                                     [
                                       "origin-access-identity/cloudfront/",
                                       {
-                                        "Ref": "JSCCStaticWebsiteJSCCCloudFrontOAI7BCE2C80"
+                                        "Ref": "eShopWebsiteeShopOAI53230596"
                                       }
                                     ]
                                   ]
@@ -292,21 +247,21 @@
                   "version": "1.134.0"
                 }
               },
-              "JSCCDeployWithInvalidation": {
-                "id": "JSCCDeployWithInvalidation",
-                "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation",
+              "eShop-Bucket-Deployment": {
+                "id": "eShop-Bucket-Deployment",
+                "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment",
                 "children": {
                   "AwsCliLayer": {
                     "id": "AwsCliLayer",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation/AwsCliLayer",
+                    "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/AwsCliLayer",
                     "children": {
                       "Code": {
                         "id": "Code",
-                        "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation/AwsCliLayer/Code",
+                        "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/AwsCliLayer/Code",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation/AwsCliLayer/Code/Stage",
+                            "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/AwsCliLayer/Code/Stage",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.AssetStaging",
                               "version": "1.134.0"
@@ -314,11 +269,11 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation/AwsCliLayer/Code/AssetBucket",
+                            "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/AwsCliLayer/Code/AssetBucket",
                             "children": {
                               "Notifications": {
                                 "id": "Notifications",
-                                "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation/AwsCliLayer/Code/AssetBucket/Notifications",
+                                "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/AwsCliLayer/Code/AssetBucket/Notifications",
                                 "constructInfo": {
                                   "fqn": "@aws-cdk/core.Construct",
                                   "version": "1.134.0"
@@ -338,7 +293,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation/AwsCliLayer/Resource",
+                        "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/AwsCliLayer/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::Lambda::LayerVersion",
                           "aws:cdk:cloudformation:props": {
@@ -396,7 +351,7 @@
                   },
                   "CustomResourceHandler": {
                     "id": "CustomResourceHandler",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation/CustomResourceHandler",
+                    "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/CustomResourceHandler",
                     "constructInfo": {
                       "fqn": "@aws-cdk/aws-lambda.SingletonFunction",
                       "version": "1.134.0"
@@ -404,11 +359,11 @@
                   },
                   "Asset1": {
                     "id": "Asset1",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation/Asset1",
+                    "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/Asset1",
                     "children": {
                       "Stage": {
                         "id": "Stage",
-                        "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation/Asset1/Stage",
+                        "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/Asset1/Stage",
                         "constructInfo": {
                           "fqn": "@aws-cdk/core.AssetStaging",
                           "version": "1.134.0"
@@ -416,11 +371,11 @@
                       },
                       "AssetBucket": {
                         "id": "AssetBucket",
-                        "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation/Asset1/AssetBucket",
+                        "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/Asset1/AssetBucket",
                         "children": {
                           "Notifications": {
                             "id": "Notifications",
-                            "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation/Asset1/AssetBucket/Notifications",
+                            "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/Asset1/AssetBucket/Notifications",
                             "constructInfo": {
                               "fqn": "@aws-cdk/core.Construct",
                               "version": "1.134.0"
@@ -440,11 +395,11 @@
                   },
                   "CustomResource": {
                     "id": "CustomResource",
-                    "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation/CustomResource",
+                    "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/CustomResource",
                     "children": {
                       "Default": {
                         "id": "Default",
-                        "path": "MyJSCCStaticWebsite/JSCCStaticWebsite/JSCCDeployWithInvalidation/CustomResource/Default",
+                        "path": "eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/CustomResource/Default",
                         "constructInfo": {
                           "fqn": "@aws-cdk/core.CfnResource",
                           "version": "1.134.0"
@@ -468,85 +423,17 @@
               "version": "1.134.0"
             }
           },
-          "Custom::S3AutoDeleteObjectsCustomResourceProvider": {
-            "id": "Custom::S3AutoDeleteObjectsCustomResourceProvider",
-            "path": "MyJSCCStaticWebsite/Custom::S3AutoDeleteObjectsCustomResourceProvider",
-            "children": {
-              "Staging": {
-                "id": "Staging",
-                "path": "MyJSCCStaticWebsite/Custom::S3AutoDeleteObjectsCustomResourceProvider/Staging",
-                "constructInfo": {
-                  "fqn": "@aws-cdk/core.AssetStaging",
-                  "version": "1.134.0"
-                }
-              },
-              "Role": {
-                "id": "Role",
-                "path": "MyJSCCStaticWebsite/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role",
-                "constructInfo": {
-                  "fqn": "@aws-cdk/core.CfnResource",
-                  "version": "1.134.0"
-                }
-              },
-              "Handler": {
-                "id": "Handler",
-                "path": "MyJSCCStaticWebsite/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler",
-                "constructInfo": {
-                  "fqn": "@aws-cdk/core.CfnResource",
-                  "version": "1.134.0"
-                }
-              }
-            },
-            "constructInfo": {
-              "fqn": "@aws-cdk/core.CustomResourceProvider",
-              "version": "1.134.0"
-            }
-          },
           "AssetParameters": {
             "id": "AssetParameters",
-            "path": "MyJSCCStaticWebsite/AssetParameters",
+            "path": "eShopWebsite/AssetParameters",
             "children": {
-              "1f7e277bd526ebce1983fa1e7a84a5281ec533d9187caaebb773681bbf7bf4c1": {
-                "id": "1f7e277bd526ebce1983fa1e7a84a5281ec533d9187caaebb773681bbf7bf4c1",
-                "path": "MyJSCCStaticWebsite/AssetParameters/1f7e277bd526ebce1983fa1e7a84a5281ec533d9187caaebb773681bbf7bf4c1",
-                "children": {
-                  "S3Bucket": {
-                    "id": "S3Bucket",
-                    "path": "MyJSCCStaticWebsite/AssetParameters/1f7e277bd526ebce1983fa1e7a84a5281ec533d9187caaebb773681bbf7bf4c1/S3Bucket",
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/core.CfnParameter",
-                      "version": "1.134.0"
-                    }
-                  },
-                  "S3VersionKey": {
-                    "id": "S3VersionKey",
-                    "path": "MyJSCCStaticWebsite/AssetParameters/1f7e277bd526ebce1983fa1e7a84a5281ec533d9187caaebb773681bbf7bf4c1/S3VersionKey",
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/core.CfnParameter",
-                      "version": "1.134.0"
-                    }
-                  },
-                  "ArtifactHash": {
-                    "id": "ArtifactHash",
-                    "path": "MyJSCCStaticWebsite/AssetParameters/1f7e277bd526ebce1983fa1e7a84a5281ec533d9187caaebb773681bbf7bf4c1/ArtifactHash",
-                    "constructInfo": {
-                      "fqn": "@aws-cdk/core.CfnParameter",
-                      "version": "1.134.0"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "@aws-cdk/core.Construct",
-                  "version": "1.134.0"
-                }
-              },
               "e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68": {
                 "id": "e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68",
-                "path": "MyJSCCStaticWebsite/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68",
+                "path": "eShopWebsite/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68",
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "MyJSCCStaticWebsite/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/S3Bucket",
+                    "path": "eShopWebsite/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/S3Bucket",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.134.0"
@@ -554,7 +441,7 @@
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "MyJSCCStaticWebsite/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/S3VersionKey",
+                    "path": "eShopWebsite/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/S3VersionKey",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.134.0"
@@ -562,7 +449,7 @@
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "MyJSCCStaticWebsite/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/ArtifactHash",
+                    "path": "eShopWebsite/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/ArtifactHash",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.134.0"
@@ -576,11 +463,11 @@
               },
               "a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8": {
                 "id": "a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8",
-                "path": "MyJSCCStaticWebsite/AssetParameters/a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8",
+                "path": "eShopWebsite/AssetParameters/a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8",
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "MyJSCCStaticWebsite/AssetParameters/a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8/S3Bucket",
+                    "path": "eShopWebsite/AssetParameters/a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8/S3Bucket",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.134.0"
@@ -588,7 +475,7 @@
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "MyJSCCStaticWebsite/AssetParameters/a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8/S3VersionKey",
+                    "path": "eShopWebsite/AssetParameters/a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8/S3VersionKey",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.134.0"
@@ -596,7 +483,7 @@
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "MyJSCCStaticWebsite/AssetParameters/a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8/ArtifactHash",
+                    "path": "eShopWebsite/AssetParameters/a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8/ArtifactHash",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.134.0"
@@ -608,13 +495,13 @@
                   "version": "1.134.0"
                 }
               },
-              "48d647e7c2349e881c109f54a2577646369067530a8cb0571001780073dc1fff": {
-                "id": "48d647e7c2349e881c109f54a2577646369067530a8cb0571001780073dc1fff",
-                "path": "MyJSCCStaticWebsite/AssetParameters/48d647e7c2349e881c109f54a2577646369067530a8cb0571001780073dc1fff",
+              "37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19": {
+                "id": "37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19",
+                "path": "eShopWebsite/AssetParameters/37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19",
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "MyJSCCStaticWebsite/AssetParameters/48d647e7c2349e881c109f54a2577646369067530a8cb0571001780073dc1fff/S3Bucket",
+                    "path": "eShopWebsite/AssetParameters/37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19/S3Bucket",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.134.0"
@@ -622,7 +509,7 @@
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "MyJSCCStaticWebsite/AssetParameters/48d647e7c2349e881c109f54a2577646369067530a8cb0571001780073dc1fff/S3VersionKey",
+                    "path": "eShopWebsite/AssetParameters/37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19/S3VersionKey",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.134.0"
@@ -630,7 +517,7 @@
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "MyJSCCStaticWebsite/AssetParameters/48d647e7c2349e881c109f54a2577646369067530a8cb0571001780073dc1fff/ArtifactHash",
+                    "path": "eShopWebsite/AssetParameters/37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19/ArtifactHash",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.134.0"
@@ -650,15 +537,15 @@
           },
           "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C": {
             "id": "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C",
-            "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C",
+            "path": "eShopWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C",
             "children": {
               "ServiceRole": {
                 "id": "ServiceRole",
-                "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole",
+                "path": "eShopWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource",
+                    "path": "eShopWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -697,11 +584,11 @@
                   },
                   "DefaultPolicy": {
                     "id": "DefaultPolicy",
-                    "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy",
+                    "path": "eShopWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource",
+                        "path": "eShopWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                           "aws:cdk:cloudformation:props": {
@@ -725,7 +612,7 @@
                                           },
                                           ":s3:::",
                                           {
-                                            "Ref": "AssetParameters48d647e7c2349e881c109f54a2577646369067530a8cb0571001780073dc1fffS3Bucket28015B6D"
+                                            "Ref": "AssetParameters37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19S3Bucket2374D28F"
                                           }
                                         ]
                                       ]
@@ -740,7 +627,7 @@
                                           },
                                           ":s3:::",
                                           {
-                                            "Ref": "AssetParameters48d647e7c2349e881c109f54a2577646369067530a8cb0571001780073dc1fffS3Bucket28015B6D"
+                                            "Ref": "AssetParameters37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19S3Bucket2374D28F"
                                           },
                                           "/*"
                                         ]
@@ -761,7 +648,7 @@
                                   "Resource": [
                                     {
                                       "Fn::GetAtt": [
-                                        "JSCCStaticWebsiteJSCCSiteBucket11BBD5A2",
+                                        "eShopWebsiteeShopAppBucket0C39B308",
                                         "Arn"
                                       ]
                                     },
@@ -771,7 +658,7 @@
                                         [
                                           {
                                             "Fn::GetAtt": [
-                                              "JSCCStaticWebsiteJSCCSiteBucket11BBD5A2",
+                                              "eShopWebsiteeShopAppBucket0C39B308",
                                               "Arn"
                                             ]
                                           },
@@ -819,11 +706,11 @@
               },
               "Code": {
                 "id": "Code",
-                "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code",
+                "path": "eShopWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code",
                 "children": {
                   "Stage": {
                     "id": "Stage",
-                    "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/Stage",
+                    "path": "eShopWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/Stage",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.AssetStaging",
                       "version": "1.134.0"
@@ -831,11 +718,11 @@
                   },
                   "AssetBucket": {
                     "id": "AssetBucket",
-                    "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/AssetBucket",
+                    "path": "eShopWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/AssetBucket",
                     "children": {
                       "Notifications": {
                         "id": "Notifications",
-                        "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/AssetBucket/Notifications",
+                        "path": "eShopWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/AssetBucket/Notifications",
                         "constructInfo": {
                           "fqn": "@aws-cdk/core.Construct",
                           "version": "1.134.0"
@@ -855,7 +742,7 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "MyJSCCStaticWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource",
+                "path": "eShopWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                   "aws:cdk:cloudformation:props": {
@@ -906,7 +793,7 @@
                     "handler": "index.handler",
                     "layers": [
                       {
-                        "Ref": "JSCCStaticWebsiteJSCCDeployWithInvalidationAwsCliLayer074E3F2B"
+                        "Ref": "eShopWebsiteeShopBucketDeploymentAwsCliLayerDF963DDC"
                       }
                     ],
                     "runtime": "python3.7",
@@ -926,11 +813,11 @@
           },
           "CDKMetadata": {
             "id": "CDKMetadata",
-            "path": "MyJSCCStaticWebsite/CDKMetadata",
+            "path": "eShopWebsite/CDKMetadata",
             "children": {
               "Default": {
                 "id": "Default",
-                "path": "MyJSCCStaticWebsite/CDKMetadata/Default",
+                "path": "eShopWebsite/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "@aws-cdk/core.CfnResource",
                   "version": "1.134.0"
@@ -938,7 +825,7 @@
               },
               "Condition": {
                 "id": "Condition",
-                "path": "MyJSCCStaticWebsite/CDKMetadata/Condition",
+                "path": "eShopWebsite/CDKMetadata/Condition",
                 "constructInfo": {
                   "fqn": "@aws-cdk/core.CfnCondition",
                   "version": "1.134.0"

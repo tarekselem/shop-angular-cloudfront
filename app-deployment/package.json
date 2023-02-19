@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "deploy": "tsc; cdk bootstrap --profile=personal; cdk deploy --profile=personal --require-approval=never;",
     "watch": "tsc -w",
     "cdk": "cdk",
     "synth": "cdk synth"

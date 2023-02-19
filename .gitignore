@@ -2,6 +2,9 @@
 
 # compiled output
 /app-deployment/website
+/app-deployment/cdk.out/asset.*
+/app-deployment/cdk.out/.cache
+
 /dist
 /tmp
 /out-tsc
