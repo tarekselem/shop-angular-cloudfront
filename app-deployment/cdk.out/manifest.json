@@ -1,0 +1,585 @@
+{
+  "version": "15.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "eShopWebsite": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "eShopWebsite.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/eShopWebsite": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68.zip",
+              "id": "e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68",
+              "packaging": "file",
+              "sourceHash": "e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68",
+              "s3BucketParameter": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3BucketAEADE8C7",
+              "s3KeyParameter": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3VersionKeyE415415F",
+              "artifactHashParameter": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68ArtifactHashD9A515C3"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/construct-compat.js:416:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:180:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:90:43)",
+              "new Asset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:44:44)",
+              "AssetCode.bind (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/code.js:269:26)",
+              "new LayerVersion (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/layers.js:60:33)",
+              "new AwsCliLayer (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.js:20:9)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:74:22)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8",
+              "id": "a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8",
+              "packaging": "zip",
+              "sourceHash": "a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8",
+              "s3BucketParameter": "AssetParametersa3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8S3BucketD1AD544E",
+              "s3KeyParameter": "AssetParametersa3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8S3VersionKey93A19D70",
+              "artifactHashParameter": "AssetParametersa3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8ArtifactHash238275D6"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/construct-compat.js:416:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:180:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:90:43)",
+              "new Asset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:44:44)",
+              "AssetCode.bind (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/code.js:269:26)",
+              "new Function (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/function.js:100:33)",
+              "SingletonFunction.ensureLambda (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:153:16)",
+              "new SingletonFunction (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:28:36)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:71:25)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19",
+              "id": "37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19",
+              "packaging": "zip",
+              "sourceHash": "37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19",
+              "s3BucketParameter": "AssetParameters37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19S3Bucket2374D28F",
+              "s3KeyParameter": "AssetParameters37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19S3VersionKeyE9983E94",
+              "artifactHashParameter": "AssetParameters37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19ArtifactHash8D37E199"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/construct-compat.js:416:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:180:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:90:43)",
+              "new Asset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:44:44)",
+              "Object.bind (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/source.js:59:31)",
+              "/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:92:62",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:92:39)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/eShopWebsite/eShop-OAI/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eShopWebsiteeShopOAI53230596",
+            "trace": [
+              "new OriginAccessIdentity (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-cloudfront/lib/origin-access-identity.js:42:25)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:13:31)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/eShopWebsite/eShopAppBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eShopWebsiteeShopAppBucket0C39B308",
+            "trace": [
+              "new Bucket (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3/lib/bucket.js:595:26)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:14:28)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/eShopWebsite/eShopAppBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eShopWebsiteeShopAppBucketPolicyC9F62EB2",
+            "trace": [
+              "new BucketPolicy (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.js:34:25)",
+              "Bucket.addToResourcePolicy (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3/lib/bucket.js:153:27)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:19:20)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/eShopWebsite/eShop-distribution/CFDistribution": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eShopWebsiteeShopdistributionCFDistribution1A11DBFC",
+            "trace": [
+              "new CloudFrontWebDistribution (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-cloudfront/lib/web-distribution.js:300:30)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:26:30)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eShopWebsiteeShopBucketDeploymentAwsCliLayerDF963DDC",
+            "trace": [
+              "new LayerVersion (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/layers.js:67:26)",
+              "new AwsCliLayer (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.js:20:9)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:74:22)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/eShopWebsite/eShop-Bucket-Deployment/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eShopWebsiteeShopBucketDeploymentCustomResource3DAC00A1",
+            "trace": [
+              "new CustomResource (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/custom-resource.js:32:25)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:101:9)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3BucketAEADE8C7",
+            "trace": [
+              "new FileAssetParameters (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:90:43)",
+              "new Asset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:44:44)",
+              "AssetCode.bind (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/code.js:269:26)",
+              "new LayerVersion (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/layers.js:60:33)",
+              "new AwsCliLayer (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.js:20:9)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:74:22)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3VersionKeyE415415F",
+            "trace": [
+              "new FileAssetParameters (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:90:43)",
+              "new Asset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:44:44)",
+              "AssetCode.bind (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/code.js:269:26)",
+              "new LayerVersion (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/layers.js:60:33)",
+              "new AwsCliLayer (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.js:20:9)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:74:22)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68ArtifactHashD9A515C3",
+            "trace": [
+              "new FileAssetParameters (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:90:43)",
+              "new Asset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:44:44)",
+              "AssetCode.bind (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/code.js:269:26)",
+              "new LayerVersion (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/layers.js:60:33)",
+              "new AwsCliLayer (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.js:20:9)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:74:22)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/AssetParameters/a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersa3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8S3BucketD1AD544E",
+            "trace": [
+              "new FileAssetParameters (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:90:43)",
+              "new Asset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:44:44)",
+              "AssetCode.bind (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/code.js:269:26)",
+              "new Function (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/function.js:100:33)",
+              "SingletonFunction.ensureLambda (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:153:16)",
+              "new SingletonFunction (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:28:36)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:71:25)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/AssetParameters/a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersa3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8S3VersionKey93A19D70",
+            "trace": [
+              "new FileAssetParameters (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:90:43)",
+              "new Asset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:44:44)",
+              "AssetCode.bind (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/code.js:269:26)",
+              "new Function (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/function.js:100:33)",
+              "SingletonFunction.ensureLambda (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:153:16)",
+              "new SingletonFunction (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:28:36)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:71:25)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/AssetParameters/a3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersa3058ccb468d757ebb89df5363a1c20f5307c6911136f29d00e1a68c9b2aa7e8ArtifactHash238275D6",
+            "trace": [
+              "new FileAssetParameters (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:90:43)",
+              "new Asset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:44:44)",
+              "AssetCode.bind (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/code.js:269:26)",
+              "new Function (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/function.js:100:33)",
+              "SingletonFunction.ensureLambda (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:153:16)",
+              "new SingletonFunction (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:28:36)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:71:25)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/AssetParameters/37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19S3Bucket2374D28F",
+            "trace": [
+              "new FileAssetParameters (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:90:43)",
+              "new Asset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:44:44)",
+              "Object.bind (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/source.js:59:31)",
+              "/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:92:62",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:92:39)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/AssetParameters/37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19S3VersionKeyE9983E94",
+            "trace": [
+              "new FileAssetParameters (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:90:43)",
+              "new Asset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:44:44)",
+              "Object.bind (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/source.js:59:31)",
+              "/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:92:62",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:92:39)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/AssetParameters/37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters37fba2fdb83879fc739c85b6b603e6ecfaddd3a3efc422b9d936787d244e0a19ArtifactHash8D37E199",
+            "trace": [
+              "new FileAssetParameters (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:90:43)",
+              "new Asset (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:44:44)",
+              "Object.bind (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/source.js:59:31)",
+              "/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:92:62",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:92:39)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265",
+            "trace": [
+              "new Role (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-iam/lib/role.js:74:22)",
+              "new Function (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/function.js:82:35)",
+              "SingletonFunction.ensureLambda (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:153:16)",
+              "new SingletonFunction (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:28:36)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:71:25)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF",
+            "trace": [
+              "new Policy (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-iam/lib/policy.js:58:26)",
+              "Role.addToPrincipalPolicy (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-iam/lib/role.js:213:34)",
+              "Grant.addToPrincipal (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-iam/lib/grant.js:93:65)",
+              "Grant.addToPrincipalOrResource (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-iam/lib/grant.js:47:30)",
+              "Import.grant (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3/lib/bucket.js:449:31)",
+              "Import.grantRead (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3/lib/bucket.js:259:21)",
+              "Asset.grantRead (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:99:21)",
+              "Object.bind (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/source.js:66:23)",
+              "/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:92:62",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:92:39)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536",
+            "trace": [
+              "new Function (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/function.js:145:26)",
+              "SingletonFunction.ensureLambda (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:153:16)",
+              "new SingletonFunction (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.js:28:36)",
+              "new BucketDeployment (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.js:71:25)",
+              "new StaticSite (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/static-site.js:41:9)",
+              "new MyStaticSiteStack (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:9:9)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:13:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stage.js:103:41)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:14:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/eShopWebsite/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/node_modules/@aws-cdk/core/lib/stage.js:103:41)",
+              "Object.<anonymous> (/Volumes/MyData/SourceCode/Prod/aws-practitioner-js/shop-angular-cloudfront/app-deployment/index.js:14:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1159:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1213:10)",
+              "Module.load (node:internal/modules/cjs/loader:1037:32)",
+              "Module._load (node:internal/modules/cjs/loader:878:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ]
+      },
+      "displayName": "eShopWebsite"
+    }
+  }
+}
